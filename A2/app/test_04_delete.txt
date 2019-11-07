@@ -1,0 +1,49 @@
+//Author: Josh Chisholm (100770668)
+
+//expecting no error: delete
+delete -s 1081
+delete -s 55 -p "help" -u cindy
+delete -t 81 -p "mysongs" -u gjones
+delete -Global -s 62 -p "help" -u cindy
+delete -Global -t 63 -p "help" -u cindy
+delete -p "help" -Global -u cindy -t 65
+delete -r 109
+delete -u gjones
+delete -p "favourites" -u ajones
+delete -t 155
+
+//expecting failure: delete
+delete
+delete
+delete -x
+delete abba
+delete ab ba
+
+//expecting failure: delete - does not exist
+delete -s 1060
+delete -s 1060
+delete -t 150
+delete -t 150
+delete -u userDNE
+
+//expecting failure: delete - wrong number of args
+delete -s 1081 EXTRA
+delete -s 55 -p "help" -u cindy EXTRA
+delete -t 81 -p "mysongs" -u gjones EXTRA
+delete -Global -s 62 -p "help" -u cindy EXTRA
+delete -Global -t 63 -p "help" -u cindy EXTRA
+delete -p "help" -Global -u cindy -t 65 EXTRA
+delete -r 109 EXTRA
+delete -u gjones EXTRA
+delete -p "favourites" -u fjones EXTRA
+delete -t 155 EXTRA
+delete -s
+delete -s 55 -p "help" -u
+delete -t 81 -p "mysongs" -u
+delete -Global -s 62 -p "help" -u
+delete -Global -t 63 -p "help" -u
+delete -p "help" -Global -u cindy -t
+delete -r
+delete -u
+delete -p "favourites" -u
+delete -t

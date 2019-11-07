@@ -1,0 +1,28 @@
+//Author: Josh Chisholm (100770668)
+//expecting no error: add
+//see for 'test_01_add.txt'
+
+//expecting failure: add
+add
+add
+add -x
+add abba
+
+//expecting failure: add - already existing
+add -r 103 "Beatles For Sale" "Beatles" "George Martin" 1964
+add -s 1001 "Misery" "Paul McCartney, John Lennon"
+add -t 10 100 1000 1
+add -u ajones "Anne Jones"
+add -p ajones "driving"
+
+//expecting failure: add - wrong number of args
+add -r 103 "Beatles For Sale" "Beatles" "George Martin" 1964 EXTRA
+add -s 1001 "Misery" "Paul McCartney, John Lennon" EXTRA
+add -t 10 100 1000 1 EXTRA
+add -u ajones "Anne Jones" EXTRA
+add -p ajones "driving" EXTRA
+add -r 103 "Beatles For Sale" "Beatles" "George Martin"
+add -s 1001 "Misery"
+add -t 10 100 1000
+add -u ajones
+add -p ajones

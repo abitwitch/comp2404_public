@@ -1,0 +1,11 @@
+//this is a comment
+
+add arg1 arg2 arg3 "The 4th argument"
+add arg1 arg2 arg3 "The 4th argument"
+show arg1 arg2 arg3 "The 4th argument"
+
+delete arg1 arg2 arg3 "The 4th argument"
+
+//Another comment
+
+notARealCmd arg1
