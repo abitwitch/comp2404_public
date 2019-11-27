@@ -1,0 +1,38 @@
+//Author: Josh Chisholm (100770668)
+
+//expecting no error: show
+show songs
+show users
+show playlists -u ajones
+show songs -u ajones -p "driving"
+show songs -p "driving" -u ajones
+show recordings
+show tracks
+
+//expecting failure: show
+show
+show
+show -x
+show abba
+show playlists -u useDNE
+
+//expecting failure: show - wrong number of args
+show songs EXTRA
+show users EXTRA
+show playlists -u ajones EXTRA
+show playlists -u useDNE EXTRA
+show songs -u ajones -p "driving" EXTRA
+show songs -p "driving" -u ajones EXTRA
+show recordings EXTRA
+show tracks EXTRA
+show
+show
+show playlists -u
+show playlists -u
+show songs -u ajones -p
+show songs -p "driving" -u
+show
+show
+
+//expecting failure: show - duplicate tags
+show songs -u ajones -u "driving"
